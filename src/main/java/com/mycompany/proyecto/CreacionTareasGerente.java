@@ -49,9 +49,7 @@ public class CreacionTareasGerente extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        estadoComboBox = new javax.swing.JComboBox<>();
         tituloTextField = new javax.swing.JTextField();
         finicioTextField = new javax.swing.JTextField();
         ffinalizacionTextField = new javax.swing.JTextField();
@@ -68,20 +66,12 @@ public class CreacionTareasGerente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jLabel1.setText("Creación de Tareas");
 
         jLabel4.setText("Fecha Inicio:");
 
-        jLabel7.setText("Estado:");
-
         jLabel5.setText("Fecha Finalización:");
-
-        estadoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solicitada", "En proceso", "Finalizada" }));
-        estadoComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                estadoComboBoxActionPerformed(evt);
-            }
-        });
 
         jLabel3.setText("Titulo de la Tareja:");
 
@@ -112,40 +102,41 @@ public class CreacionTareasGerente extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(139, 139, 139))
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8))
-                        .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(idTextField)
-                            .addComponent(tituloTextField)
-                            .addComponent(finicioTextField)
-                            .addComponent(ffinalizacionTextField)
-                            .addComponent(descripcionTextField)
-                            .addComponent(estadoComboBox, 0, 105, Short.MAX_VALUE)
-                            .addComponent(proyectoComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel8))
+                                .addGap(47, 47, 47)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(idTextField)
+                                    .addComponent(tituloTextField)
+                                    .addComponent(finicioTextField)
+                                    .addComponent(ffinalizacionTextField)
+                                    .addComponent(descripcionTextField)
+                                    .addComponent(proyectoComboBox, 0, 105, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(84, 84, 84)
+                                .addComponent(jLabel1))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(163, 163, 163)
+                        .addComponent(jButton1)))
                 .addContainerGap(73, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel1)
-                .addGap(28, 28, 28)
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -169,13 +160,9 @@ public class CreacionTareasGerente extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(ffinalizacionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(estadoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addGap(41, 41, 41)
                 .addComponent(jButton1)
-                .addGap(22, 22, 22))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
@@ -185,10 +172,6 @@ public class CreacionTareasGerente extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jMenu2MouseClicked
-
-    private void estadoComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estadoComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_estadoComboBoxActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -211,7 +194,6 @@ public class CreacionTareasGerente extends javax.swing.JFrame {
             String descripcion = descripcionTextField.getText();
             String fechain = finicioTextField.getText();
             String fechafin = ffinalizacionTextField.getText();
-            String estado = estadoComboBox.getSelectedItem().toString();
 
             Tarea tareaNueva = new Tarea();
             tareaNueva.setIdTarea(id);
@@ -220,7 +202,7 @@ public class CreacionTareasGerente extends javax.swing.JFrame {
             tareaNueva.setDescripcionTarea(descripcion);
             tareaNueva.setFechaInicio(fechain);
             tareaNueva.setFechaFinalizacion(fechafin);
-            tareaNueva.setEstado(estado);
+            tareaNueva.setEstado("Solicitada");
             
             Proyecto.tareas.add(tareaNueva);
             
@@ -251,7 +233,6 @@ public class CreacionTareasGerente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField descripcionTextField;
-    private javax.swing.JComboBox<String> estadoComboBox;
     private javax.swing.JTextField ffinalizacionTextField;
     private javax.swing.JTextField finicioTextField;
     private javax.swing.JTextField idTextField;
@@ -262,7 +243,6 @@ public class CreacionTareasGerente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;

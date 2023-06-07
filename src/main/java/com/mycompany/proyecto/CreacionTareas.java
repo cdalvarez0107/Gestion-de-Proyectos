@@ -45,14 +45,13 @@ public class CreacionTareas extends javax.swing.JFrame {
         idTextField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         descripcionTextField = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        estadoComboBox = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jLabel1.setText("Creación de Tareas");
 
         jLabel2.setText("ID:");
@@ -64,15 +63,6 @@ public class CreacionTareas extends javax.swing.JFrame {
         jLabel3.setText("Titulo de la Tareja:");
 
         jLabel6.setText("Descripción de la Tarea:");
-
-        jLabel7.setText("Estado:");
-
-        estadoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solicitada", "En proceso", "Finalizada" }));
-        estadoComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                estadoComboBoxActionPerformed(evt);
-            }
-        });
 
         jButton1.setText("Crear");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -95,40 +85,38 @@ public class CreacionTareas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7))
-                        .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(idTextField)
-                            .addComponent(tituloTextField)
-                            .addComponent(finicioTextField)
-                            .addComponent(ffinalizacionTextField)
-                            .addComponent(descripcionTextField)
-                            .addComponent(estadoComboBox, 0, 105, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(168, 168, 168)
-                        .addComponent(jLabel1)))
-                .addContainerGap(111, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(28, 28, 28))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(141, 141, 141))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(184, 184, 184))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(72, 72, 72)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(idTextField)
+                    .addComponent(tituloTextField)
+                    .addComponent(finicioTextField)
+                    .addComponent(ffinalizacionTextField)
+                    .addComponent(descripcionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 97, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel1)
-                .addGap(34, 34, 34)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -149,12 +137,8 @@ public class CreacionTareas extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(ffinalizacionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(estadoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addGap(30, 30, 30)
                 .addComponent(jButton1)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         pack();
@@ -164,10 +148,6 @@ public class CreacionTareas extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jMenu2MouseClicked
-
-    private void estadoComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estadoComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_estadoComboBoxActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -189,7 +169,6 @@ public class CreacionTareas extends javax.swing.JFrame {
             String descripcion = descripcionTextField.getText();
             String fechain = finicioTextField.getText();
             String fechafin = ffinalizacionTextField.getText();
-            String estado = estadoComboBox.getSelectedItem().toString();
 
             Tarea tareaNueva = new Tarea();
             tareaNueva.setIdTarea(id);
@@ -197,7 +176,7 @@ public class CreacionTareas extends javax.swing.JFrame {
             tareaNueva.setDescripcionTarea(descripcion);
             tareaNueva.setFechaInicio(fechain);
             tareaNueva.setFechaFinalizacion(fechafin);
-            tareaNueva.setEstado(estado);
+            tareaNueva.setEstado("Solicitada");
             
             Proyecto.tareas.add(tareaNueva);
 
@@ -216,7 +195,6 @@ public class CreacionTareas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField descripcionTextField;
-    private javax.swing.JComboBox<String> estadoComboBox;
     private javax.swing.JTextField ffinalizacionTextField;
     private javax.swing.JTextField finicioTextField;
     private javax.swing.JTextField idTextField;
@@ -227,7 +205,6 @@ public class CreacionTareas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JTextField tituloTextField;

@@ -45,13 +45,13 @@ public class ConsultarTareasMiembro extends javax.swing.JFrame {
                     tareasAsignadas.add(ta);
                 }
             }
-        Collections.sort(tareasAsignadas, new Comparator<Tarea>() {
-        @Override
-            public int compare(Tarea tarea1, Tarea tarea2) {
-                return tarea1.getFechaInicio().compareTo(tarea2.getFechaInicio());
-            }
-        });
             
+            Collections.sort(tareasAsignadas, new Comparator<Tarea>() {
+                @Override
+                public int compare(Tarea tarea1, Tarea tarea2) {
+                    return tarea1.getFechaInicio().compareTo(tarea2.getFechaInicio());
+                }
+            });
 
             DefaultTableModel t = new DefaultTableModel(new String[]{"ID", "Titulo", "Descripcion", "Fecha de Inicio", "Fecha de Finalizacion", "Proyecto", "Estado"},tareasAsignadas.size());
             jTable1.setModel(t);
@@ -154,9 +154,6 @@ public class ConsultarTareasMiembro extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(233, 233, 233))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
                         .addContainerGap())
@@ -179,6 +176,10 @@ public class ConsultarTareasMiembro extends javax.swing.JFrame {
                             .addComponent(buscarButton)
                             .addComponent(modificarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(264, 264, 264))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
